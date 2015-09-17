@@ -36,6 +36,13 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
+		<repository>
+			<id>oracle</id>
+			<name>ORACLE JDBC Repository</name>
+			<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+	    </repository> 
+    
 	</repositories>
 	
 	<dependencies>
@@ -145,6 +152,13 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.31</version>
+		</dependency>
+		
+		<!-- Oracle -->
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc14</artifactId>
+		    <version>10.2.0.4.0</version>
 		</dependency>
 
 		<!-- AspectJ -->
