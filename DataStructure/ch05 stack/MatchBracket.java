@@ -3,7 +3,7 @@ package chapter5;
 /*
  * 5.5 괄호 검사 프로그램
  */
-class CharStack extends Stack<Character> {
+class MStack extends Stack<Character> {
 	
 	// ArrayStack.java 파일 내의 
 	// Stack 클래스 상속하여 기본적인 Stack 기능 대체
@@ -43,7 +43,7 @@ class CharStack extends Stack<Character> {
 public class MatchBracket {
 	
 	public static void main(String[] args) {
-		CharStack s = new CharStack();
+		MStack s = new MStack();
 		
 		if (s.check_matching("{ A[(i+1)]=0; }")) {
 			System.out.println("괄호검사성공");
