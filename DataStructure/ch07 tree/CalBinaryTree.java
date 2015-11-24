@@ -5,6 +5,8 @@ package chapter07;
  */
 class CalFunc {
 	
+	// LinkedBinaryTree 파일의 TreeNode 클래스 사용
+	
 	// 노드의 개수
 	int get_node_count(TreeNode node) {
 		int count = 0;
