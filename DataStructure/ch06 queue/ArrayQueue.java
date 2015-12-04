@@ -3,12 +3,12 @@ package chapter06;
 /*
  * 6.1 원형 큐 프로그램
  */
-class Queue<E> implements QueueADT<E> {
-
+public class ArrayQueue<E> implements QueueADT<E> {
+	
 	final static int MAX_QUEUE_SIZE = 100;
 	QueueType q;
 	
-	public Queue() {
+	public ArrayQueue() {
 		q = new QueueType();
 	}
 	
@@ -68,13 +68,9 @@ class Queue<E> implements QueueADT<E> {
 			error("큐가 공백상태입니다.");
 		return q.queue[(q.front + 1) % MAX_QUEUE_SIZE];
 	}
-	
-}
-
-public class ArrayQueue {
 
 	public static void main(String[] args) {
-		Queue<Integer> q = new Queue<Integer>();
+		ArrayQueue<Integer> q = new ArrayQueue<Integer>();
 		q.enqueue(1);
 		q.enqueue(2);
 		q.enqueue(3);

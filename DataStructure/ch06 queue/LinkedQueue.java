@@ -3,11 +3,12 @@ package chapter06;
 /*
  * 6.4 연결된 큐 프로그램
  */
-class LQueue implements QueueADT<Integer>{
+// 연결된 큐 테스트 함수
+public class LinkedQueue implements QueueADT<Integer> {
 
 	QueueType q;
 	
-	public LQueue() {
+	public LinkedQueue() {
 		q = new QueueType();
 	}
 	
@@ -82,13 +83,8 @@ class LQueue implements QueueADT<Integer>{
 		return q.front.item; // 데이터 반환
 	}
 	
-}
-
-// 연결된 큐 테스트 함수
-public class LinkedQueue {
-
 	public static void main(String[] args) {
-		LQueue q = new LQueue();
+		LinkedQueue q = new LinkedQueue();
 		
 		q.enqueue(1);
 		q.enqueue(2);
