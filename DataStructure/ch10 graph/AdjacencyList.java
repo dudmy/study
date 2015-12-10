@@ -75,11 +75,6 @@ public class AdjacencyList implements GraphADT {
 	}
 
 	@Override
-	public boolean is_empty() {
-		return g.n == 0;
-	}
-
-	@Override
 	public void display() {
 		for(int i = 0; i < MAX_VERTICES; i++)
 			System.out.print(g.adj_list[i] + " ");

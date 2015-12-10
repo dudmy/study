@@ -5,7 +5,7 @@ package chapter10;
  */
 public class AdjacencyMatrix implements GraphADT {
 
-	static final int MAX_VERTICES = 5;
+	final static int MAX_VERTICES = 5;
 	GraphType g;
 	
 	public AdjacencyMatrix() {
@@ -60,14 +60,6 @@ public class AdjacencyMatrix implements GraphADT {
 		}
 		g.adj_mat[u][v] = 0;
 		g.adj_mat[v][u] = 0;
-	}
-
-	@Override
-	public boolean is_empty() {
-		if (g.n == 0)
-			return true;
-		else
-			return false;
 	}
 
 	@Override

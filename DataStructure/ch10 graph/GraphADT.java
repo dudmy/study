@@ -17,7 +17,7 @@ public interface GraphADT {
 	// 그래프의 간선 (u, v)를 삭제한다
 	void delete_edge(int u, int v);
 	
-	// 그래프가 공백 상태인지 확인한다
-	boolean is_empty();
+	// 그래프 출력
+	void display();
 	
 }
