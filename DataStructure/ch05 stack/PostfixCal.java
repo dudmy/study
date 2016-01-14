@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 5.6 후위 표기식 계산

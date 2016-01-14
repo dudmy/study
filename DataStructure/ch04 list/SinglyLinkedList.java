@@ -1,4 +1,4 @@
-package chapter4;
+package chapter04;
 
 /*
  * 4.12 단순 연결 리스트 테스트 프로그램

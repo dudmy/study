@@ -1,25 +1,13 @@
-package chapter4;
+package chapter04;
 
 /*
  * 4.28 연결 리스트로 구현된 리스트 ADT 테스트 프로그램
  */
-class ListNode {
-	
-	int data;
-	ListNode link;
-	
-	public ListNode(int data) {
-		this.data = data;
-		this.link = null;
-	}
-	
-}
-
-public class LinkedListADT {
+public class LinkedList {
 
 	LinkedListType list;
 	
-	public LinkedListADT() {
+	public LinkedList() {
 		list = new LinkedListType();
 	}
 	
@@ -152,7 +140,7 @@ public class LinkedListADT {
 	}
 	
 	public static void main(String[] args) {
-		LinkedListADT list = new LinkedListADT();
+		LinkedList list = new LinkedList();
 		
 		list.add(0, 20);
 		list.add_last(30);

@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 5.4 연결된 스택 프로그램

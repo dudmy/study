@@ -1,4 +1,4 @@
-package chapter4;
+package chapter04;
 
 /*
  * 4.18 이중 연결 리스트 테스트 프로그램

@@ -1,20 +1,8 @@
-package chapter4;
+package chapter04;
 
 /*
  * 4.15 원형 연결 리스트 테스트 프로그램
  */
-class ListNode {
-	
-	int data;
-	ListNode link;
-	
-	public ListNode(int data) {
-		this.data = data;
-		this.link = null;
-	}
-	
-}
-
 public class CircularLinkedList {
 
 	ListNode head;

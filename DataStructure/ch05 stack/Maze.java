@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 5.8 미로 탐색 프로그램

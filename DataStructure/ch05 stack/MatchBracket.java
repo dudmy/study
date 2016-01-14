@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 5.5 괄호 검사 프로그램

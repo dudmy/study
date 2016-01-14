@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * ADT 5.1 추상 자료형 Stack

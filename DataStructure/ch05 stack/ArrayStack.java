@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 5.3 일반적인 배열 스택 프로그램

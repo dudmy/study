@@ -1,4 +1,4 @@
-package chapter2;
+package chapter02;
 
 /*
  * 2.8 하노이탑 문제 프로그램

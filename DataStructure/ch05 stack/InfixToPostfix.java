@@ -1,4 +1,4 @@
-package chapter5;
+package chapter05;
 
 /*
  * 중위 표기 수식을 후위 표기 수식으로 변환하는 프로그램

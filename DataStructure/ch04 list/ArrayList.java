@@ -1,4 +1,4 @@
-package chapter4;
+package chapter04;
 
 /*
  * 4.4 배열을 이용한 리스트 ADT 테스트 프로그램
