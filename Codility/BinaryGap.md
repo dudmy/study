@@ -70,3 +70,39 @@ class Solution {
 }
 ```
 
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis summary: The solution obtained perfect score.
+* Code
+
+```java
+class Solution {
+    public int solution(int N) {
+        int max = 0;
+        int oneCnt = 0;
+        int zeroCnt = 0;
+
+        while (N > 0) {
+            if (N % 2 == 0) {
+                if (oneCnt > 0)
+                    zeroCnt++;
+            } else {
+                oneCnt++;
+            }
+            
+            if (oneCnt == 2) {
+                if (max < zeroCnt)
+                    max = zeroCnt;
+                oneCnt = 1;
+                zeroCnt = 0;
+            }
+
+            N = N / 2;
+        }
+
+        return max;
+    }
+}
+```
