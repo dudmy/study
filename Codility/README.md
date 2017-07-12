@@ -20,3 +20,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 
 * Iterations
     - [BinaryGap](https://github.com/dudmy/study/blob/master/Codility/BinaryGap.md)
+* Arrays
+    - [CyclicRotation](https://github.com/dudmy/study/blob/master/Codility/CyclicRotation.md)
