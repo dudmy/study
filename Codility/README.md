@@ -14,6 +14,7 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Markdown 형식을 사용하여 작성한다.
 * 문제의 제목과 설명을 두서에 기입한다.
 * 문제의 풀이를 작성할 때는 count, code, score 등의 정보를 포함한다.
+* 풀이 진행 과정에 대한 한 줄의 코멘트를 남긴다.
 
 ## Lessons
 
