@@ -19,7 +19,9 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 ## Lessons
 
 * Iterations
-    - [BinaryGap](https://github.com/dudmy/study/blob/master/Codility/BinaryGap.md)
+    - [BinaryGap](./BinaryGap.md)
 * Arrays
-    - [CyclicRotation](https://github.com/dudmy/study/blob/master/Codility/CyclicRotation.md)
-    - [OddOccurrencesInArray](https://github.com/dudmy/study/blob/master/Codility/OddOccurrencesInArray.md)
+    - [CyclicRotation](./CyclicRotation.md)
+    - [OddOccurrencesInArray](./OddOccurrencesInArray.md)
+* Time Complexity
+    - [PermMissingElem](./PermMissingElem.md)
