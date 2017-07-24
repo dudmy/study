@@ -64,3 +64,30 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N) or O(N * log(N))
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        long N = A.length + 1;
+        long total = N * (N + 1) / 2;
+        long sum = 0;
+        
+        for (int value : A) sum += value;
+        
+        return (int) (total - sum);
+    }
+}
+```
+
+### Comment
+
+문제에서 주어지는 range 클 경우에 int의 최댓값을 넘어서기 때문에 long을 사용해야 한다. Missing element를 찾기 위해 값을 일일이 확인하는 대신, 총합산을 비교하는 방법으로 생각의 관점을 바꾸는 게 중요한 듯하다. 그래도 아직 1 ~ N 까지의 합이 N * (N + 1) / 2 라는 것이 기억하고 있어서 다행이다.
