@@ -25,3 +25,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [OddOccurrencesInArray](./OddOccurrencesInArray.md)
 * Time Complexity
     - [PermMissingElem](./PermMissingElem.md)
+    - [FrogJmp](./FrogJmp.md)
