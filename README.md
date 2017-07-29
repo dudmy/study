@@ -20,3 +20,4 @@ This is a repo that records and shares what I have studied.
 - [ ] Synchronous-Asynchronous-Blocking-NonBlocking
 - [ ] Android Soft Navigation Bar
 - [ ] [Creating Android Custom Views](https://developer.android.com/training/custom-views/index.html)
+- [ ] CharSequence-String (ex. SpannableStringBuilder)
