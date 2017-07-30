@@ -26,3 +26,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Time Complexity
     - [PermMissingElem](./PermMissingElem.md)
     - [FrogJmp](./FrogJmp.md)
+    - [TapeEquilibrium](./TapeEquilibrium.md)
