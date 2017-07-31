@@ -121,3 +121,37 @@ class Solution {
     }
 }
 ```
+
+### Third 
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N)
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        int minDiff = Integer.MAX_VALUE;
+        int first = 0, second = 0;
+        
+        for (int value : A) {
+            second += value;
+        }
+        
+        for (int P = 1; P < A.length; P++) {
+            first += A[P - 1];
+            second -= A[P - 1];
+            minDiff = Math.min(minDiff, Math.abs(first - second));
+        }
+        
+        return minDiff;
+    }
+}
+```
+
+### Comment
+
+첫 번째 풀이에서 올바르게 작성했다고 생각했는데 퍼포먼스가 아닌 정확도로 인해 답이 틀렸다고 나왔다. 계속된 삽질의 결과 minDiff의 초깃값을 잘 못 설정했다는 것을 알게 됐다. 주어진 배열 A의 element 범위를 고려하지 않고, 배열의 총합은 양수일 거라고 가정을 한 것이 문제이다. 그래서 minDiff를 Integer의 최댓값으로 놓고 다시 돌려보니 통과했다. 이러한 실수를 줄여나가야 하는데 계속 반복하게 된다. :(
