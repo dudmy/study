@@ -27,3 +27,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [PermMissingElem](./PermMissingElem.md)
     - [FrogJmp](./FrogJmp.md)
     - [TapeEquilibrium](./TapeEquilibrium.md)
+* Test
+    - [MissingInteger](./MissingInteger.md)
