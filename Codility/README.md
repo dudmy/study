@@ -29,3 +29,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [TapeEquilibrium](./TapeEquilibrium.md)
 * Counting Elements
     - [MissingInteger](./MissingInteger.md)
+    - [PermCheck](./PermCheck.md)
