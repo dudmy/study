@@ -80,3 +80,28 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N) or O(N * log(N))
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        int[] count = new int[A.length];
+        
+        for (int element : A) {
+            if (element > A.length) return 0;
+            else if (count[element - 1] == 1) return 0;
+            else count[element -1] = 1;
+        }
+        
+        return 1;
+    }
+}
+```
