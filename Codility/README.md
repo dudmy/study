@@ -30,3 +30,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Counting Elements
     - [MissingInteger](./MissingInteger.md)
     - [PermCheck](./PermCheck.md)
+    - [FrogRiverOne](./FrogRiverOne.md)
