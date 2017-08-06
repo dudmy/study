@@ -31,3 +31,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [MissingInteger](./MissingInteger.md)
     - [PermCheck](./PermCheck.md)
     - [FrogRiverOne](./FrogRiverOne.md)
+    - [MaxCounters](./MaxCounters.md)
