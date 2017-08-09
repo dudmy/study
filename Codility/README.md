@@ -32,3 +32,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [PermCheck](./PermCheck.md)
     - [FrogRiverOne](./FrogRiverOne.md)
     - [MaxCounters](./MaxCounters.md)
+* Prefix Sums
+    - [PassingCars](./PassingCars.md)
