@@ -108,3 +108,78 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 88%
+  - Correctness: 100%
+  - Performance: 80%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N + M)
+* Code
+
+```java
+class Solution {
+    public int[] solution(int N, int[] A) {
+        int[] result = new int[N];
+        int maxValue = 0;
+        int maxCounter = 0;
+        int pos;
+        
+        for (int element : A) {
+            if (element <= N) {
+                pos = element - 1;
+                result[pos] += 1;
+                maxValue = Math.max(maxValue, result[pos] + maxCounter);
+            } else {
+                maxCounter = maxValue;
+                result = new int[N];
+            }
+        }
+        
+        for (int i = 0; i < result.length; i++) result[i] += maxCounter; 
+        
+        return result;
+    }
+}
+```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N + M)
+* Code
+
+```java
+class Solution {
+    public int[] solution(int N, int[] A) {
+        int[] result = new int[N];
+        int maxValue = 0;
+        int maxCounter = 0;
+        int pos;
+        
+        for (int element : A) {
+            if (element <= N) {
+                pos = element - 1;
+                result[pos] = Math.max(maxCounter + 1, result[pos] + 1);
+                maxValue = Math.max(maxValue, result[pos]);
+            } else {
+                maxCounter = maxValue;
+            }
+        }
+        
+        for (int i = 0; i < result.length; i++) result[i] = Math.max(maxCounter, result[i]); 
+        
+        return result;
+    }
+}
+```
+
+## Comment
+
+이번 문제는 score 100% 달생하는데 정확도보다 퍼포먼스로 인해 시간이 오래 걸렸다. 배열을 초기화하는 방법으로 풀이하면 timeout 에러로 실패했기 때문에 다른 방법을 찾아야 했다.
