@@ -87,3 +87,37 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N)
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+       int east = 0;
+       int count = 0;
+       
+       for (int element : A) {
+            if (element == 0) {
+                east++;
+            } else {
+                count += east;
+                
+                if (count > 1000000000) return -1;
+            }
+       }
+       
+       return count;
+    }
+}
+```
+
+## Comment
+
+문제를 다른 시각으로 접근하면 풀이 코드가 더욱 간결해지는 것 같다. 과정을 지속해서 함으로써 이러한 센스가 늘지는 잘 모르겠다. 아직은 다른 사람들의 풀이를 보면서 배우는 과정이 필요하다.
