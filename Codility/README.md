@@ -34,3 +34,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [MaxCounters](./MaxCounters.md)
 * Prefix Sums
     - [PassingCars](./PassingCars.md)
+    - [CountDiv](./CountDiv.md)
