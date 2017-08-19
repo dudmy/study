@@ -35,3 +35,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Prefix Sums
     - [PassingCars](./PassingCars.md)
     - [CountDiv](./CountDiv.md)
+    - [MinAvgTwoSlice](./MinAvgTwoSlice.md)
