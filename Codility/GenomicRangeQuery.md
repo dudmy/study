@@ -98,3 +98,46 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 87%
+    - Correctness: 100%
+    - Performance: 66%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N + M)
+  - almost_all_same_letters (ex. GGGGGG..??..GGGGGG..??..GGGGGG)
+* Code
+
+```java
+class Solution {
+    public int[] solution(String S, int[] P, int[] Q) {
+        String[] s = S.split("");
+
+        int[] A = new int[s.length + 1];
+        int[] C = new int[s.length + 1];
+        int[] G = new int[s.length + 1];
+        int[] T = new int[s.length + 1];
+
+        for (int i = 0; i < s.length; i++) {
+            A[i + 1] = A[i] + (s[i].equals("A") ? 1 : 0);
+            C[i + 1] = C[i] + (s[i].equals("C") ? 1 : 0);
+            G[i + 1] = G[i] + (s[i].equals("G") ? 1 : 0);
+            T[i + 1] = T[i] + (s[i].equals("T") ? 1 : 0);
+        }
+
+        int[] result = new int[P.length];
+
+        for (int i = 0; i < P.length; i++) {
+            if (A[P[i]] < A[Q[i] + 1]) result[i] = 1;
+            else if (C[P[i]] < C[Q[i] + 1]) result[i] = 2;
+            else if (G[P[i]] < G[Q[i] + 1]) result[i] = 3;
+            else result[i] = 4;
+        }
+
+        return result;
+    }
+}
+```
