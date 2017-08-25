@@ -141,3 +141,43 @@ class Solution {
     }
 }
 ```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N + M)
+* Code
+
+```java
+class Solution {
+    public int[] solution(String S, int[] P, int[] Q) {
+        int[] A = new int[S.length() + 1];
+        int[] C = new int[S.length() + 1];
+        int[] G = new int[S.length() + 1];
+
+        for (int i = 0; i < S.length(); i++) {
+            A[i + 1] = A[i] + (S.charAt(i) == 'A' ? 1 : 0);
+            C[i + 1] = C[i] + (S.charAt(i) == 'C' ? 1 : 0);
+            G[i + 1] = G[i] + (S.charAt(i) == 'G' ? 1 : 0);
+        }
+
+        int[] result = new int[P.length];
+
+        for (int i = 0; i < P.length; i++) {
+            if (A[P[i]] < A[Q[i] + 1]) result[i] = 1;
+            else if (C[P[i]] < C[Q[i] + 1]) result[i] = 2;
+            else if (G[P[i]] < G[Q[i] + 1]) result[i] = 3;
+            else result[i] = 4;
+        }
+
+        return result;
+    }
+}
+```
+
+## Comment
+
+PAINLESS 문제를 풀면서 방법에 익숙해졌다고 생각했는데... RESPECTABLE 문제 역시 해결 방법이 잘 떠오르지 않는다.
