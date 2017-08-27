@@ -37,3 +37,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [CountDiv](./CountDiv.md)
     - [MinAvgTwoSlice](./MinAvgTwoSlice.md)
     - [GenomicRangeQuery](./GenomicRangeQuery.md)
+* Sorting
+    - [Distinct](./Distinct.md)
