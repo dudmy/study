@@ -57,3 +57,7 @@ class Solution {
     }
 }
 ```
+
+## Comment
+
+Task score 100% 달성은 했지만, 문제 출제 의도에 맞게 풀이를 했는지는 의중이다.
