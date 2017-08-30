@@ -39,3 +39,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [GenomicRangeQuery](./GenomicRangeQuery.md)
 * Sorting
     - [Distinct](./Distinct.md)
+    - [Triangle](./Triangle.md)
