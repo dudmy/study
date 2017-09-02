@@ -152,3 +152,70 @@ class Solution {
     }
 }
 ```
+
+### Third
+
+* Programming language: Java
+* Task score: 93%
+    - Correctness: 100%
+    - Performance: 83%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N*log(N))
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        quickSort(A, 0, A.length - 1);
+
+        for (int i = 0; i < A.length - 2; i++) {
+            long AP = A[i];
+            long AQ = A[i + 1];
+            long AR = A[i + 2];
+
+            if (AP + AQ > AR && AQ + AR > AP && AR + AP > AQ)
+                return 1;
+        }
+
+        return 0;
+    }
+
+    private void quickSort(int[] A, int left, int right) {
+        if (left < right) {
+            int pivot = partition(A, left, right);
+            quickSort(A, left, pivot - 1);
+            quickSort(A, pivot + 1, right);
+        }
+    }
+    
+    private int partition(int[] A, int left, int right) {
+        int pivot = left;
+        int low = left;
+        int high = right + 1;
+        
+        do {
+            do {
+                low++;
+            } while (low <= right && A[low] < A[pivot]);
+            do {
+                high--;
+            } while (high >= left && A[high] > A[pivot]);
+            
+            if (low < high)
+                swap(A, low, high);
+                
+        } while (low < high);
+        
+        swap(A, left, high);
+        
+        return high;
+    }
+    
+    private void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
+    }
+}
+```
