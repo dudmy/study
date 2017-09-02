@@ -219,3 +219,37 @@ class Solution {
     }
 }
 ```
+
+### Fourth
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N*log(N))
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+     public int solution(int[] A) {
+        Arrays.sort(A);
+
+        for (int i = 0; i < A.length - 2; i++) {
+            long AP = A[i];
+            long AQ = A[i + 1];
+            long AR = A[i + 2];
+
+            if (AP + AQ > AR && AQ + AR > AP && AR + AP > AQ)
+                return 1;
+        }
+
+        return 0;
+    }
+}
+```
+
+## Comment
+
+문제를 해결하기 위해서 삽입정렬, 합병정렬, 퀵정렬 그리고 Arrays 클래스의 sort()를 사용해보았다. 그리고 퍼포먼스의 결과는 합병정렬 < 삽입정렬 < 퀵정렬 < Arrays.sort() 순서로 나타났다. 예전에 알고리즘 공부할 때에 합병정렬 최악의 시간복잡도는 O(N**2)라고 봤었는데 이 부분은 다시 한번 확인해봐야 할 것 같다. Arrays.sort() 메소드에서 사용하는 정렬 알고리즘이 궁금해서 찾아보았더니 Dual-Pivot Quicksort(by Vladimir Yaroslavskiy, Jon Bentley, and Joshua Bloch)라고 API에 나와 있다. 일반적인 퀵정렬은 하나의 pivot을 가지고 2부분으로 나누는데, 이 알고리즘은 두 개의 pivot을 가지고 3부분으로 나누어서 해결하는 것 같다. 나중에... 언젠가... 구현해보자...
