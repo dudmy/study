@@ -89,3 +89,66 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 68%
+    - Correctness: 100%
+    - Performance: 16%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N**3)
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        mergeSort(A, 0, A.length - 1);
+        
+        for (int i = 0; i < A.length - 2; i++) {
+            long AP = A[i];
+            long AQ = A[i + 1];
+            long AR = A[i + 2];
+
+            if (AP + AQ > AR && AQ + AR > AP && AR + AP > AQ)
+                return 1;
+        }
+
+        return 0;
+    }
+   
+    private void mergeSort(int[] A, int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+            mergeSort(A, left, mid);
+            mergeSort(A, mid + 1, right);
+            merge(A, left, mid, right);
+        }
+    }
+
+    private void merge(int[] A, int left, int mid, int right) {
+        int i = left;
+        int j = mid + 1;
+        int k = left;
+        int[] sorted = new int[A.length];
+
+        while (i <= mid && j <= right) {
+            if (A[i] <= A[j])
+                sorted[k++] = A[i++];
+            else
+                sorted[k++] = A[j++];
+        }
+
+        if (i  > mid)
+            for (int l = j; l <= right; l++)
+                sorted[k++] = A[l];
+        else
+            for (int l = i; l <= mid; l++)
+                sorted[k++] = A[l];
+
+        for (int l = left; l <= right; l++)
+            A[l] = sorted[l];
+    }
+}
+```
