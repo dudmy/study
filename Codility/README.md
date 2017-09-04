@@ -40,3 +40,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Sorting
     - [Distinct](./Distinct.md)
     - [Triangle](./Triangle.md)
+    - [MaxProductOfThree](./MaxProductOfThree)
