@@ -65,8 +65,8 @@ class Solution {
         for (int i = 0; i < A.length; i++) {
             long rJth = (long) i + A[i];
 
-            for (int l = i + 1; l < A.length; l++) {
-                long lKth = (long) l - A[l];
+            for (int j = i + 1; j < A.length; j++) {
+                long lKth = (long) j - A[j];
 
                 if (rJth >= lKth)
                     cnt++;
@@ -76,6 +76,48 @@ class Solution {
             }
         }
 
+        return cnt;
+    }
+}
+```
+
+### Second
+
+* Programming language: Java
+* Task score: 87%
+  - Correctness: 100%
+  - Performance: 75%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N*log(N)) or O(N)
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        long[] lKth = new long[A.length];
+        long[] rJth = new long[A.length];
+        
+        for (int i = 0; i < A.length; i++) {
+            lKth[i] = (long) i - A[i];
+            rJth[i] = (long) i + A[i];
+        }
+        
+        Arrays.sort(lKth);
+        Arrays.sort(rJth);
+        
+        int cnt = 0;
+        for (int i = 0; i < A.length - 1; i++) {
+            for (int j = i + 1; j < A.length && rJth[i] >= lKth[j]; j++) {
+                cnt++;
+                
+                if (cnt > 10000000)
+                    return -1;
+            }
+        }
+        
         return cnt;
     }
 }
