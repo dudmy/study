@@ -122,3 +122,49 @@ class Solution {
     }
 }
 ```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N*log(N)) or O(N)
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        long[] lKth = new long[A.length];
+        long[] rJth = new long[A.length];
+        
+        for (int i = 0; i < A.length; i++) {
+            lKth[i] = (long) i - A[i];
+            rJth[i] = (long) i + A[i];
+        }
+        
+        Arrays.sort(lKth);
+        Arrays.sort(rJth);
+        
+        int cnt = 0;
+        int j = 0;
+        for (int i = 0; i < A.length - 1; i++) {
+            while (j < A.length && rJth[i] >= lKth[j]) {
+                cnt += j - i;
+                j++;
+                
+                if (cnt > 10000000)
+                    return -1;
+            }
+        }
+        
+        return cnt;
+    }
+}
+```
+
+## Comment
+
+퍼포먼스를 제외한 문제의 정확도를 만족하는 풀이는 금방 구현할 수 있었다. 하지만 마지막까지 퍼포먼스 100%를 달성하는 데 실패했다. 다른 사람들의 풀이(3번째 solution)를 찾아봤는데 while 루프 안에 cnt += j - 1 부분이 왜 성립하는지 이해되지 않는다. 이 문제는 나중에 다시 살펴봐야겠다.
