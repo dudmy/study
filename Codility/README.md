@@ -42,3 +42,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [Triangle](./Triangle.md)
     - [MaxProductOfThree](./MaxProductOfThree.md)
     - [NumberOfDiscIntersections](./NumberOfDiscIntersections.md)
+* Stacks and Queues
+    - [StoneWall](./StoneWall.md)
