@@ -44,3 +44,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [NumberOfDiscIntersections](./NumberOfDiscIntersections.md)
 * Stacks and Queues
     - [StoneWall](./StoneWall.md)
+    - [Brackets](./Brackets.md)
