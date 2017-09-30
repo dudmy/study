@@ -47,3 +47,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [Brackets](./Brackets.md)
     - [Nesting](./Nesting.md)
     - [Fish](./Fish.md)
+* Leader
+    - [EquiLeader](./EquiLeader.md)
