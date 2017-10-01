@@ -113,3 +113,68 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 55%
+  - Correctness: 100%
+  - Performance: 0%
+* Analysis
+  - The following issues have been detected: timeout errors.
+  - Detected time complexity: O(N ** 2)
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    private Integer getLeader(int[] A) {
+        int N = A.length;
+        int size = 0;
+        int candidate = 0;
+
+        for (int a : A) {
+            if (size == 0) {
+                size++;
+                candidate = a;
+            } else if (candidate != a) {
+                size--;
+            } else {
+                size++;
+            }
+        }
+
+        int cnt = 0;
+        for (int a : A) {
+            if (a == candidate)
+                cnt++;
+        }
+
+        return cnt > N / 2 ? candidate : null;
+    }
+
+    public int solution(int[] A) {
+        int N = A.length;
+
+        Integer[] leaderL = new Integer[N - 1];
+        Integer[] leaderR = new Integer[N - 1];
+
+        for (int i = 0; i < N - 1; i++) {
+            leaderL[i] = getLeader(Arrays.copyOfRange(A, 0, i + 1));
+            leaderR[i] = getLeader(Arrays.copyOfRange(A, i + 1, N));
+        }
+
+        int eqiCnt = 0;
+        for (int i = 0; i < N - 1; i++) {
+            if (leaderL[i] == null || leaderR[i] == null)
+                continue;
+
+            if (Objects.equals(leaderL[i], leaderR[i]))
+                eqiCnt++;
+        }
+
+        return eqiCnt;
+    }
+}
+```
