@@ -178,3 +178,67 @@ class Solution {
     }
 }
 ```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N)
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        int size = 0;
+        int candidate = 0;
+
+        for (int a : A) {
+            if (size == 0) {
+                size++;
+                candidate = a;
+            } else if (candidate != a) {
+                size--;
+            } else {
+                size++;
+            }
+        }
+
+        // Stack을 이용해서 체크했다면 empty인 경우로 후보자가 없는 상태이다.
+        if (size == 0)
+            return 0;
+        
+        int cnt = 0;
+        for (int a : A) {
+            if (a == candidate)
+                cnt++;
+        }
+        
+        // Leader가 될 수 있는 조건인 과반수를 넘지 않은 경우이다.
+        if (cnt <= A.length / 2)
+            return 0;
+            
+        int lCnt = 0;
+        int eqiCnt = 0;
+        
+        for (int i = 0; i < A.length - 1; i++) {
+            if (A[i] == candidate)
+                lCnt++;
+            
+            boolean leftHasLeader = lCnt > (i + 1) / 2;
+            boolean rightHasLeader = (cnt - lCnt) > (A.length - i - 1) / 2;
+            if (leftHasLeader && rightHasLeader)
+                eqiCnt++;
+        }
+
+        return eqiCnt;
+    }
+}
+```
+
+## Comment
+
+어찌어찌 문제 해결에 근접하긴 했지만, 스스로 풀지는 못했다. 실패한 테스트 케이스에 대한 예제가 주어지지 않는 경우에는 어디서 잘못 됐는지 찾는 게 어렵다. 결국, 다른 사람의 코드를 참고하였고 나중에 다시 풀어봐야겠다.
