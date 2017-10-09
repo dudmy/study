@@ -49,3 +49,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [Fish](./Fish.md)
 * Leader
     - [EquiLeader](./EquiLeader.md)
+    - [Dominator](./Dominator.md)
