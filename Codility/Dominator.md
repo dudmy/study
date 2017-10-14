@@ -95,3 +95,4 @@ class Solution {
 
 ## Comment
 
+Open reading material에서 주어진 goldenLeader 함수를 이용해서 풀었다. 이번 레슨은 PDF 자료를 먼저 읽어본 후에 Task를 진행해서 조금 수월하게 풀이에 접근할 수 있었다. 이러한 순서로 진행하는 게 도움이 되는 것인지는 잘 모르겠다.
