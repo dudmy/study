@@ -50,3 +50,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Leader
     - [EquiLeader](./EquiLeader.md)
     - [Dominator](./Dominator.md)
+* Maximum slice problem
+    - [MaxDoubleSliceSum](./MaxDoubleSliceSum.md)
