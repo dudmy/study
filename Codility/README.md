@@ -52,3 +52,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [Dominator](./Dominator.md)
 * Maximum slice problem
     - [MaxDoubleSliceSum](./MaxDoubleSliceSum.md)
+    - [MaxProfit](./MaxProfit.md)
