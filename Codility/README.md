@@ -54,3 +54,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [MaxDoubleSliceSum](./MaxDoubleSliceSum.md)
     - [MaxSliceSum](./MaxSliceSum.md)
     - [MaxProfit](./MaxProfit.md)
+* Prime and composite numbers
+    - [MinPerimeterRectangle](./MinPerimeterRectangle.md)
