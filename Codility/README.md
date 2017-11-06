@@ -57,3 +57,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Prime and composite numbers
     - [MinPerimeterRectangle](./MinPerimeterRectangle.md)
     - [CountFactors](./CountFactors.md)
+    - [Flags](./Flags.md)
