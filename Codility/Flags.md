@@ -115,3 +115,42 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 66%
+  - Correctness: 100%
+  - Performance: 28%
+* Analysis
+  - The following issues have been detected: timeout errors.
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        List<Integer> peaks = new ArrayList<>();
+        for (int i = 1; i < A.length - 1; i++) {
+            if (A[i - 1] < A[i] && A[i] > A[i + 1])
+                peaks.add(i);
+        }
+        
+        for (int flagNum = 1; ; flagNum++) {
+            int count = 0;
+            int lastFlagged = -1;
+            
+            for (int peak : peaks) {
+                if (lastFlagged < 0 || peak - lastFlagged >= flagNum) {
+                    lastFlagged = peak;
+                    count++;
+                }
+            }
+            
+            if (count < flagNum)
+                return flagNum - 1;
+        }
+    }
+}
+```
