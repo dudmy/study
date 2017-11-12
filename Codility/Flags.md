@@ -154,3 +154,51 @@ class Solution {
     }
 }
 ```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N)
+* Code
+
+```java
+class Solution {
+    public int solution(int[] A) {
+        if (A.length < 3)
+            return 0;
+            
+        int flags;
+        
+        for (flags = 1; flags < A.length; flags++) {
+            int K = flags;
+            
+            for (int i = 1; i < A.length - 1; i++) {
+                // If position i is peak.
+                if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
+                    K--;
+                    i += flags - 1; // next peakable position
+                }
+                
+                // There may be more peak position.
+                if (K == 0)
+                    break;
+            }
+            
+            // If the flag that can be set to the maximum is exceeded.
+            if (K > 0) {
+                flags--;
+                break;
+            }
+        }
+        
+        return flags;
+    }
+}
+```
+
+## Comment
+
+이번 문제도 결국은 답을 찾지 못하고 다른 사람들의 풀이를 찾아보았다. Lesson이 진행될 수록 스스로 해결할 수 있는 문제가 줄어드는 것 같다.
