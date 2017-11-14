@@ -58,3 +58,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [MinPerimeterRectangle](./MinPerimeterRectangle.md)
     - [CountFactors](./CountFactors.md)
     - [Flags](./Flags.md)
+    - [Peaks](./Peaks.md)
