@@ -134,3 +134,59 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N * log(log(N)))
+* Code
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        int N = A.length;
+        
+        List<Integer> peaks = new ArrayList<>();
+        for (int i = 1; i < N - 1; i++) {
+            if (A[i - 1] < A[i] && A[i] > A[i + 1])
+                peaks.add(i);
+        }
+        
+        for (int elements = 1; elements <= N; elements++) {
+            if (N % elements != 0)
+                continue;
+            
+            int findCnt = 0;
+            int blocks = N / elements;
+            boolean divided = true;
+            
+            for (int peak : peaks) {
+                if (peak / elements > findCnt) {
+                    divided = false;
+                    break;
+                }
+                
+                if (peak / elements == findCnt)
+                    findCnt++;
+            }
+            
+            if (findCnt != blocks)
+                divided = false;
+                
+            if (divided)
+                return blocks;
+        }
+        
+        return 0;
+    }
+}
+```
+
+## Comment
+
+'peak / elements > findCnt'에 대한 의미를 이해하는데 시간이 걸렸다. 정수 나누기 연산에서 나머지 값을 버리는 내림 법칙을 이용해서, 현재 block에 peak이 존재하는지 체크하는 것이다.
