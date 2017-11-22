@@ -59,3 +59,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [CountFactors](./CountFactors.md)
     - [Flags](./Flags.md)
     - [Peaks](./Peaks.md)
+* Sieve of Eratosthenes
+    - [CountSemiprimes](./CountSemiprimes.md)
