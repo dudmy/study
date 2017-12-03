@@ -61,3 +61,4 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
     - [Peaks](./Peaks.md)
 * Sieve of Eratosthenes
     - [CountSemiprimes](./CountSemiprimes.md)
+    - [CountNonDivisible](./CountNonDivisible.md)
