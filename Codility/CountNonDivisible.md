@@ -90,3 +90,53 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(N * log(N))
+* Code
+
+```java
+class Solution {
+    public int[] solution(int[] A) {
+        int N = A.length;
+
+        int[] cnt = new int[2 * N + 1];
+        for (int a : A) {
+            // 배열 A의 각 요소의 개수를 센다.
+            cnt[a]++;   
+        }
+
+        // 나눌 수 있는 요소의 개수를 센다.
+        int[] divisible = new int[cnt.length];
+        // 소수는 n의 배수가 아니기 떄문에, 루트 n까지만 나누어서 떨어지면 된다.
+        for (int i = 1; i * i < divisible.length; i++) {
+            // 요소의 배수만큼 반복문을 돌면서 확인한다.
+            for (int j = i * i; j < divisible.length; j += i) {
+                divisible[j] += cnt[i];
+
+                if (j != i * i) {
+                    divisible[j] += cnt[j / i];
+                }
+            }
+        }
+
+        int[] result = new int[N];
+        for (int i = 0; i < N; i++) {
+            // 배열 A의 총 개수에서 나눌 수 있는 요소의 개수를 차를 구하면,
+            // 나눌 수 없는 요소의 개수를 구할 수 있다.
+            result[i] = N - divisible[A[i]];
+        }
+
+        return result;   
+    }
+}
+```
+
+## Comment
+
+에라토스테네스의 체(Sieve of Eratosthenes)라는 알고리즘이 한 번에 떠오르지 않았다. 특정한 알고리즘을 이해하고 활용할 수 있어야 문제도 잘 풀 수 있는 것 같다. 많이 풀어보고 익숙해지는 게 답인 듯하다.
