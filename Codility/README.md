@@ -62,3 +62,5 @@ Train my coding skills with [codility lessons.](https://codility.com/programmers
 * Sieve of Eratosthenes
     - [CountSemiprimes](./CountSemiprimes.md)
     - [CountNonDivisible](./CountNonDivisible.md)
+* Euclidean algorithm
+    - [ChocolatesByNumbers](./ChocolatesByNumbers.md)
