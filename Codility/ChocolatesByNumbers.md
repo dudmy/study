@@ -73,3 +73,65 @@ class Solution {
     }
 }
 ```
+
+### Second
+
+* Programming language: Java
+* Task score: 87%
+  - Correctness: 100%
+  - Performance: 75%
+* Analysis
+  - The following issues have been detected: runtime errors. For example, for the input (1000000000, 1) the solution terminated unexpectedly.
+  - Detected time complexity: O(log(N + M))
+* Code
+
+```java
+class Solution {
+    public int solution(int N, int M) {
+        // Number of chococlates that I will eat.
+        return N / gcdBySubtraction(N, M);
+    }
+    
+    // Euclidean algorithm - Greatest common divisor by subtraction.
+    public int gcdBySubtraction(int a, int b) {
+        if (a == b) {
+            return a;
+        } else if (a > b) {
+            return gcdBySubtraction(a - b, b);
+        } else {
+            return gcdBySubtraction(a, b - a);
+        }
+    }
+}
+```
+
+### Third
+
+* Programming language: Java
+* Task score: 100%
+* Analysis
+  - The solution obtained perfect score.
+  - Detected time complexity: O(log(N + M))
+* Code
+
+```java
+class Solution {
+    public int solution(int N, int M) {
+        // Number of chococlates that I will eat.
+        return N / gcdByDivision(N, M);
+    }
+    
+    // Euclidean algorithm - Greatest common divisor by dividing.
+    public int gcdByDivision(int a, int b) {
+        if (a % b == 0) {
+            return b;
+        } else {
+            return gcdByDivision(b, a % b);
+        }
+    }
+}
+```
+
+## Comment
+
+주어진 두 수 사이에 존재하는 최대공약수(Greatest Common Divisor)를 구하는 유클리드 알고리즘을 이용하면 풀 수 있다. 주어진 문제에 어떠한 알고리즘을 이용해야 하는지 빨리 파악하는게 중요한 것 같다.
